@@ -21,3 +21,13 @@ void InsertionSort(int a[], int len) {
         a[j + 1] = key;
     }
 }
+
+
+//数论
+//gcd(最大公因数)
+int gcd(int a, int b)
+{
+    return b == 0 ? a : gcd(b, a % b);
+} 
+
+//埃氏筛
