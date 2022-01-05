@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-void InsertionSort(int a[], int len);//插入排序
 
 int main() {
     return 0;
