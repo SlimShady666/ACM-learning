@@ -30,4 +30,20 @@ int gcd(int a, int b)
     return b == 0 ? a : gcd(b, a % b);
 } 
 
-//埃氏筛
+//对含n个元素的数组所有子数组的枚举
+//原理：二进制下从0000（n个）一直变到1111（n个）
+int enumerate(int n)
+{
+    for(int i = 0; i < ((1 << n) - 1); i++)
+    {
+        for(int  j = 0; j < n; j++)
+        {
+            if(((i >> j) & 1) == 1)
+                ......;
+            else
+                ......;
+        }
+    }
+}
+
+
