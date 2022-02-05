@@ -72,3 +72,20 @@ void mergeSort(int l, int r)
 }
 
 //快速排序
+void quickSort(int l, int r)
+{
+    int i = l, j = r;
+    int mid = (l + r) / 2;
+    while (i <= j)
+    {
+        while (a[i] < a[mid]) i++;
+        while (a[j] > a[mid]) j--;
+        if (i <= j)
+        {
+            swap(a[i], a[j]);
+            i++; j--;
+        }
+    }
+    if (i < r) quickSort(i, r);
+    if (j > l) quickSort(l, j);
+}
