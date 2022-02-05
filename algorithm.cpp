@@ -47,5 +47,28 @@ int enumerate(int n)
 }
 
 
-//
+//递归思想
+//归并排序
+void hebin(int l, int mid, int r)
+{
+    int p1 = l, p2 = mid + 1;
+    for (int i = l; i <= r; i++)
+    {
+        if ((p2 > r) || (p1 <= mid && a[p1] <= a[p2]))
+            b[i] = a[p1++];
+        else
+            b[i] = a[p2++];
+    }
+    for (int i = l; i <= r; i++)
+        a[i] = b[i];
+}
+void mergeSort(int l, int r)
+{
+    if (l == r) return;
+    int mid = (l + r) / 2;
+    mergeSort(l, mid);
+    mergeSort(mid + 1, r);
+    hebin(l, mid, r);
+}
 
+//快速排序
