@@ -11,3 +11,5 @@ int main()
   }
   dt[i] = sum[i] - sum[i - 1];
 }
+
+//双指针
