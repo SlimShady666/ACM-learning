@@ -89,3 +89,5 @@ void quickSort(int l, int r)
     if (i < r) quickSort(i, r);
     if (j > l) quickSort(l, j);
 }
+
+//动态规划
